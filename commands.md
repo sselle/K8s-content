@@ -1,9 +1,9 @@
 ### chose context
-kubectl config set-context my-context --namespace=my-namespace
-kubectl config use-context my-context
+<kubectl config set-context my-context --namespace=my-namespace
+kubectl config use-context my-context>
 
 ### start bash in pod
-kubectl exec -it <pod-name> /bin/ash
+<kubectl exec -it <pod-name> /bin/ash>
 
 ### get detailed info on pod
 kubectl get pods <pod-name> -o yaml
