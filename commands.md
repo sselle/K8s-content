@@ -14,8 +14,8 @@
 ### Copy into / out of pod
     kubectl cp <pod-name>:/path/to/file /path/to/local/file
 
-### Update a K8s object > get YAML file
-    kubectl eidt <resource> <object>
+### Update a K8s object > get YAML file, change it and send it back to the API
+    kubectl edit <resource> <object>
 
 ### Forward port from local machine to pod (for temporary testing)
     kubectl port-forward <pod-name> <local port>:<port in pod>
