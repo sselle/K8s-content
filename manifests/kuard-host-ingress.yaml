@@ -1,3 +1,4 @@
+# create ingress to route traffic based on requested hostnames
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:

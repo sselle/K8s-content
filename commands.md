@@ -32,3 +32,12 @@
 
 ### Get ingress overview
     kubectl get ingress
+
+### Imperative scale of replicaset
+    kubectl scale rs <rs-name> --replicas=3
+
+### Get autoscaler settings
+    kubectl get hpa
+
+### Delete replica set, but keep the pods
+    kubectl delete rs <rs-name> --cascade=false
