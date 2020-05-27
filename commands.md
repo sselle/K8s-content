@@ -29,3 +29,6 @@
 
 ### Get endpoints for services
     kubectl get endpoints <svc-name> -w
+
+### Get ingress overview
+    kubectl get ingress

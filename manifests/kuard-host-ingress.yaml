@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: host-ingress
+spec:
+  rules: 
+  - host: alpaca.selle.cloud
+    http:
+      paths:
+        - backend:
+            serviceName: alpaca
+            servicePort: 8080
+  - host: bandicoot.selle.cloud
+    http:
+      paths:
+        - backend:
+            serviceName: bandicoot
+            servicePort: 8080
