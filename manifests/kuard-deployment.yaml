@@ -1,0 +1,23 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kuard
+spec:
+  selector: 
+    matchLabels:
+      run: kuard
+  replicas: 3
+  template:
+    metadata:
+      annotations: 
+        kubernetes.io/change-cause: "Updated back to blue version"
+      labels:
+        run: kuard
+    spec:
+      containers:
+        - name: kuard
+          image: "105926288004.dkr.ecr.eu-central-1.amazonaws.com/my_repo:blue"
+          imagePullPolicy: Always
+
+...

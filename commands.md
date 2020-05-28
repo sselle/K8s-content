@@ -41,3 +41,24 @@
 
 ### Delete replica set, but keep the pods
     kubectl delete rs <rs-name> --cascade=false
+
+### Save deployment in YAML file
+    kubectl get deployment <deplyoment-name> --export -o yaml > FILE.yaml
+
+### Get rollout status
+    kubectl get rollout status deployment <deply-name>
+
+### Get rollout history
+    kubectl rollout history deployment kuard
+
+### Get information on specific rollout revision
+    kubectl rollout history deployment kuard --revision=2
+
+### Rollback
+    kubectl rollout undo deployments kuard
+
+### Label nodes in the cluster
+    kubectl label nodes <name-node> <label>=<value>
+
+### Get Nodes with Label
+    kubectl get nodes --selector <label>=<value>
