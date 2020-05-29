@@ -1,0 +1,41 @@
+---
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: queue
+  labels:
+    app: work-queue
+    component: queue
+    chapter: jobs
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: work-queue
+        component: queue
+        chapter: jobs
+    spec: 
+      containers:
+      - name: queue
+        image: gcr.io/kuar-demo/kuard-amd64:1
+        imagePullPolicy: Always
+...
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: queue
+  labels:
+    app: work-queue
+    component: queue
+    chapter: jobs
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: work-queue
+    component: queue
+...

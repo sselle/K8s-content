@@ -62,3 +62,6 @@
 
 ### Get Nodes with Label
     kubectl get nodes --selector <label>=<value>
+
+### Delete multiple elements based on label
+    kubectl delete rs,svc,job -l <label>=<value>
