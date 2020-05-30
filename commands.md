@@ -71,3 +71,9 @@
 
 ### Create secret
     kubectl create secret generic <secret-name> --from-file=FILE.txt
+
+### Check for permissions
+    kubectl auth can-i create pods
+
+### Update permissions
+    kubectl auth reconcile -f RBAC-CONFIG.yaml
