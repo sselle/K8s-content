@@ -65,3 +65,9 @@
 
 ### Delete multiple elements based on label
     kubectl delete rs,svc,job -l <label>=<value>
+
+### Create a config map 
+    kubectl create configmap <configmap-name> --from-file=FILE.txt
+
+### Create secret
+    kubectl create secret generic <secret-name> --from-file=FILE.txt
